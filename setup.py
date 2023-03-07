@@ -51,5 +51,6 @@ setup(
     version="0.1",
     include_package_data=True,
     packages=["docassemble-stubs"],
+    install_requires=["docassemble.base==1.4.39"],
     zip_safe=False,
 )
