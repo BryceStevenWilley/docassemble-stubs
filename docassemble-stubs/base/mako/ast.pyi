@@ -1,4 +1,6 @@
-from _typeshed import Incomplete as Incomplete
+from _typeshed import Incomplete
+from docassemble.base.astparser import myvisitnode as myvisitnode
+from docassemble.base.mako import exceptions as exceptions, pyparser as pyparser
 
 class PythonCode:
     names_used: Incomplete
@@ -24,7 +26,7 @@ class FunctionDecl:
     def __init__(self, code, allow_kwargs: bool = ..., **exception_kwargs) -> None: ...
     def get_argument_expressions(self, as_call: bool = ...): ...
     @property
-    def allargnames(self) -> None: ...
+    def allargnames(self): ...
 
 class FunctionArgs(FunctionDecl):
     def __init__(self, code, **kwargs) -> None: ...

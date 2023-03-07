@@ -1,4 +1,5 @@
-from _typeshed import Incomplete as Incomplete
+from _typeshed import Incomplete
+from docassemble.base.marisol import Area as Area, Marisol as Marisol
 
 parser: Incomplete
 

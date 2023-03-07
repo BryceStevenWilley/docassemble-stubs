@@ -1,5 +1,5 @@
 import ast
-from _typeshed import Incomplete as Incomplete
+from _typeshed import Incomplete
 
 fix_assign: Incomplete
 valid_variable_match: Incomplete

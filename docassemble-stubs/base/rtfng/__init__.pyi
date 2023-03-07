@@ -1,3 +1,3 @@
 from _typeshed import Incomplete
 
-separator: Incomplete
+__path__: Incomplete

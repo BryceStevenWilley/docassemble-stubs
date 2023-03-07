@@ -1,4 +1,4 @@
-from _typeshed import Incomplete as Incomplete
+from _typeshed import Incomplete
 from pygments.lexer import DelegatingLexer, RegexLexer
 
 class MakoLexer(RegexLexer):
@@ -29,4 +29,4 @@ class MakoCssLexer(DelegatingLexer):
 
 pygments_html_formatter: Incomplete
 
-def syntax_highlight(filename: str = ..., language: Union[Incomplete, None] = ...): ...
+def syntax_highlight(filename: str = ..., language: Incomplete | None = ...): ...

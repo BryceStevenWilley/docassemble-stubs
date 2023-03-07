@@ -1,3 +1,0 @@
-from _typeshed import Incomplete as Incomplete
-
-def mmdc(input_text, file_format: str = ..., flags: Union[Incomplete, None] = ...): ...
