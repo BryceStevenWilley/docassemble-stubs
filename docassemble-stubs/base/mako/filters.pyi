@@ -1,5 +1,7 @@
 import markupsafe
 from _typeshed import Incomplete
+from html.entities import name2codepoint
+from html.entities import codepoint2name
 
 html_escape = markupsafe.escape
 xml_escapes: Incomplete

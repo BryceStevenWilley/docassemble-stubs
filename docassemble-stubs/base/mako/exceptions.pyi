@@ -1,6 +1,7 @@
 from _typeshed import Incomplete
 from collections.abc import Generator
 from docassemble.base.mako import compat as compat, util as util
+from docassemble.base.mako.ext.pygmentplugin import pygments_html_formatter
 
 class MakoException(Exception): ...
 class RuntimeException(MakoException): ...
