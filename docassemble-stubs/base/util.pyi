@@ -2,6 +2,7 @@ import datetime
 import json as json
 import oauth2client.client # type: ignore
 import re as re
+from typing import List
 from _typeshed import Incomplete
 from docassemble.base import DA as DA
 from docassemble.base.error import DAValidationError as DAValidationError, DAWebError as DAWebError
@@ -10,6 +11,8 @@ from docassemble.base.functions import action_argument as action_argument, actio
 from itertools import chain as chain
 
 capitalize_func = capitalize
+
+__all__: List[str]
 
 class DAEmpty:
     str: Incomplete
