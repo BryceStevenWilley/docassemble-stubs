@@ -1,7 +1,7 @@
 from _typeshed import Incomplete
 from docassemble.base.config import allowed as allowed, dbtableprefix as dbtableprefix
 from docassemble.webapp.db_object import UserMixin as UserMixin, db as db
-from flask_login import AnonymousUserMixin
+from flask_login import AnonymousUserMixin # type: ignore
 
 class AnonymousUserModel(AnonymousUserMixin):
     @property

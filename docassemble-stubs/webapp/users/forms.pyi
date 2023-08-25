@@ -6,8 +6,8 @@ from docassemble.base.logger import logmessage as logmessage
 from docassemble.webapp.daredis import r as r
 from docassemble.webapp.db_object import db as db
 from docassemble.webapp.users.models import Role as Role, UserModel as UserModel
-from docassemble_flask_user.forms import LoginForm, RegisterForm
-from flask_wtf import FlaskForm
+from docassemble_flask_user.forms import LoginForm, RegisterForm # type: ignore
+from flask_wtf import FlaskForm # type: ignore
 
 HTTP_TO_HTTPS: Incomplete
 BAN_IP_ADDRESSES: Incomplete

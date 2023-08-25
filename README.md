@@ -21,6 +21,13 @@ Install both these stubs and the corresponding version of docassemble, and run:
 stubtest --allowlist base_allowlist.txt docassemble.base
 ```
 
+For the webapp version, `DA_CONFIG_FILE` needs to be defined as an env var.
+
+```bash
+export DA_CONFIG_FILE=/home/myuser/path/to/config/myconfig.yml
+stubtest --allowlist web_allowlist.txt docassemble.webapp
+```
+
 All of the errors will be things that are missing in the stubs, and you will have to fix them.
 
 TODO(brycew): find a way to automatically update the stubs without overwriting the manually

@@ -4,6 +4,5 @@ from docassemble.webapp.app_object import app as app
 
 da_version: str
 fi_version: Incomplete
-m: Incomplete
 connect_string: Incomplete
 alchemy_connect_string: Incomplete

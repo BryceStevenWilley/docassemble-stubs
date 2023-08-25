@@ -1,4 +1,4 @@
-from celery import Celery as Celery, chord as chord
+from celery import Celery as Celery, chord as chord # type: ignore
 from docassemble.base.config import daconfig as daconfig
 from docassemble.base.logger import logmessage as logmessage
 from docassemble.webapp.worker_common import bg_context as bg_context, convert as convert, workerapp as workerapp

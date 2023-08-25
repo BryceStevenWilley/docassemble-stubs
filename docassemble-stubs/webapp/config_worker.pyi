@@ -9,5 +9,4 @@ timezone: Incomplete
 enable_utc: bool
 broker_connection_retry: bool
 broker_connection_retry_on_startup: bool
-task_routes: Incomplete
 worker_concurrency: Incomplete

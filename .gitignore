@@ -3,4 +3,6 @@
 *.egg-info/**
 .history/
 build/*
+# A personal config file, daweb needs it to stubtest
+myconfig.yml
 

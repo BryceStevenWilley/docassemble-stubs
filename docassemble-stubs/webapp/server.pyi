@@ -1,6 +1,7 @@
-import oauth2client.client
+import oauth2client.client # type: ignore
 import types
 from _typeshed import Incomplete
+from flask_login import login_user as login_user # type: ignore
 from docassemble.base.config import daconfig as daconfig, hostname as hostname, in_celery as in_celery, in_cron as in_cron
 from docassemble.base.error import DAError as DAError, DAErrorCompileError as DAErrorCompileError, DAErrorMissingVariable as DAErrorMissingVariable, DAErrorNoEndpoint as DAErrorNoEndpoint, DAException as DAException, DAValidationError as DAValidationError
 from docassemble.base.functions import ReturnValue as ReturnValue, get_default_timezone as get_default_timezone, word as word

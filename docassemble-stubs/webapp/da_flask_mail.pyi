@@ -1,5 +1,5 @@
 from _typeshed import Incomplete
-from flask_mail import Connection as FlaskConnection, Mail, Message as FlaskMessage
+from flask_mail import Connection as FlaskConnection, Mail, Message as FlaskMessage # type: ignore
 
 class Connection(FlaskConnection):
     def send(self, message, envelope_from: Incomplete | None = ...) -> None: ...

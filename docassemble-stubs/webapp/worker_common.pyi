@@ -1,4 +1,5 @@
 from _typeshed import Incomplete
+from celery import Celery # type: ignore
 from collections.abc import Generator
 from docassemble.base.config import daconfig as daconfig
 from docassemble.base.logger import logmessage as logmessage

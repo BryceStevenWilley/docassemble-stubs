@@ -1,4 +1,5 @@
 from _typeshed import Incomplete
+from flask_wtf.csrf import generate_csrf as generate_csrf # type: ignore
 from docassemble.base.config import daconfig as daconfig, hostname as hostname
 from docassemble.base.error import DAException as DAException
 from docassemble.base.functions import pickleable_objects as pickleable_objects
@@ -62,7 +63,7 @@ DEFAULT_COUNTRY: Incomplete
 def fix_words() -> None: ...
 
 cloud: Incomplete
-cloud_cache: {}
+cloud_cache: dict
 
 def cloud_custom(provider, config): ...
 

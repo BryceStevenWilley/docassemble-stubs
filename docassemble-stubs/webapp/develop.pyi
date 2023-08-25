@@ -1,6 +1,6 @@
 from _typeshed import Incomplete
-from flask_wtf import FlaskForm
-from wtforms import SelectField
+from flask_wtf import FlaskForm # type: ignore
+from wtforms import SelectField # type: ignore
 
 class NonValidatingSelectField(SelectField):
     def pre_validate(self, form) -> None: ...

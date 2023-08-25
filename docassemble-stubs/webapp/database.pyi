@@ -15,7 +15,9 @@ alchemy_connect_string: str
 alchemy_connect_args: Incomplete
 ssl_mode: Incomplete
 filename: Incomplete
-cert_file: Incomplete
+# These are within an if, so they might or might not be present
+local_parameter: Incomplete
+postgres_parameter: Incomplete
 
 def connection_string(): ...
 def alchemy_connection_string(): ...
