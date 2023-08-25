@@ -1,7 +1,7 @@
 # docassemble-stubs
 
 Docassemble has a lot of python functions, but no in-source types.
-This package lets you install and use types for docassemble functions. 
+This package lets you install and use types for docassemble functions.
 
 Currently only includes docassemble.base. Types are fairly close to what's generated
 with `stubgen`, and are still "in progress". Will make an official beta

@@ -48,9 +48,9 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(
     name="docassemble-stubs",
     author="Bryce Willey",
-    version="1.4.51a1",
+    version="1.4.66a2",
     include_package_data=True,
     packages=["docassemble-stubs"],
-    install_requires=["docassemble.base==1.4.51"],
+    install_requires=["docassemble.base==1.4.66", "types-Pygments", "types-flask"],
     zip_safe=False,
 )
