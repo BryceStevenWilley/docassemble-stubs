@@ -3,15 +3,17 @@
 Docassemble has a lot of python functions, but no in-source types.
 This package lets you install and use types for docassemble functions.
 
-Currently only includes docassemble.base. Types are fairly close to what's generated
-with `stubgen`, and are still "in progress". Will make an official beta
-release when I have gone through and tried to type the two largest files,
-`util.py` and `functions.py`.
+Includes docassemble.base and docassembe.webapp, but I wouldn't rely on
+docassemble.webapp's types to be perfectly accurate. Types are fairly close
+to what's generated with `stubgen`, and are still "in progress".
 
 ## Installation
 
-Not currently on pypi, so for now, simply download this git repo and `pip install .`
-while inside of the repo. `mypy` should be able to find types installed in your python environment.
+You can install from pypi with `pip install docassemble-types`
+
+You can also download this git repo and run `pip install .` while inside of
+the repo. `mypy` should be able to find types installed in your python
+environment.
 
 ## Updating the stubs
 
@@ -28,7 +30,8 @@ export DA_CONFIG_FILE=/home/myuser/path/to/config/myconfig.yml
 stubtest --allowlist web_allowlist.txt docassemble.webapp
 ```
 
-All of the errors will be things that are missing in the stubs, and you will have to fix them.
+All of the errors will be things that are missing in the stubs, and you will
+have to fix them manually.
 
 TODO(brycew): find a way to automatically update the stubs without overwriting the manually
 changed types?
