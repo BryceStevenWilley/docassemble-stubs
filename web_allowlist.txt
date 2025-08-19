@@ -1,4 +1,3 @@
-docassemble.webapp.app_socket
 docassemble.webapp.alembic.env
 docassemble.webapp.backend.*
 docassemble.webapp.cleanup_sessions
