@@ -1,0 +1,29 @@
+[project]
+name = "docassemble.stubs"
+version = "1.4.72b2"
+description = "Python type stubs for docassemble core code"
+readme = "README.md"
+authors = [
+    { name = "Bryce Willey", email = "bryce.steven.willey@gmail.com" },
+]
+license = "MIT"
+license-files = [
+    "LICENSE",
+]
+dependencies = [
+    "docassemble.base==1.4.72",
+    "lingua",
+    "types-Pygments"
+]
+
+[project.urls]
+GitHub-url = "https://github.com/BryceStevenWilley/docassemble-stubs"
+
+[build-system]
+requires = ["setuptools>=80.9.0", "setuptools-scm>=8.1"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = [
+    "."
+]
