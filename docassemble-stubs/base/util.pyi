@@ -10,13 +10,271 @@ from decimal import Decimal
 from docassemble.base import DA as DA
 from docassemble.base.error import DAValidationError as DAValidationError, DAWebError as DAWebError
 from docassemble.base.file_docx import include_docx_template as include_docx_template
-from docassemble.base.functions import action_argument as action_argument, action_arguments as action_arguments, action_menu_item as action_menu_item, add_separators as add_separators, all_variables as all_variables, alpha as alpha, background_action as background_action, background_error_action as background_error_action, background_response as background_response, background_response_action as background_response_action, bold as bold, capitalize as capitalize, chat_partners_available as chat_partners_available, comma_and_list as comma_and_list, comma_list as comma_list, command as command, countries_list as countries_list, country_name as country_name, create_session as create_session, create_user as create_user, currency as currency, currency_symbol as currency_symbol, CustomDataType as CustomDataType, decode_name as decode_name, define as define, defined as defined, delete_record as delete_record, device as device, dispatch as dispatch, encode_name as encode_name, fix_punctuation as fix_punctuation, force_ask as force_ask, force_gather as force_gather, forget_result_of as forget_result_of, from_b64_json as from_b64_json, get_chat_log as get_chat_log, get_config as get_config, get_country as get_country, get_default_timezone as get_default_timezone, get_dialect as get_dialect, get_emails as get_emails, get_info as get_info, get_language as get_language, get_locale as get_locale, get_progress as get_progress, get_question_data as get_question_data, get_session_variables as get_session_variables, get_user_info as get_user_info, get_user_list as get_user_list, get_user_secret as get_user_secret, get_voice as get_voice, go_back_in_session as go_back_in_session, indefinite_article as indefinite_article, indent as indent, interface as interface, interview_email as interview_email, interview_list as interview_list, interview_menu as interview_menu, interview_url as interview_url, interview_url_action as interview_url_action, interview_url_action_as_qr as interview_url_action_as_qr, interview_url_as_qr as interview_url_as_qr, invalidate as invalidate, italic as italic, item_label as item_label, json_response as json_response, language_from_browser as language_from_browser, language_name as language_name, location_known as location_known, location_returned as location_returned, log as log, manage_privileges as manage_privileges, message as message, name_suffix as name_suffix, need as need, nice_number as nice_number, noun_plural as noun_plural, noun_singular as noun_singular, noyes as noyes, ordinal as ordinal, ordinal_number as ordinal_number, period_list as period_list, phone_number_formatted as phone_number_formatted, phone_number_in_e164 as phone_number_in_e164, phone_number_is_valid as phone_number_is_valid, phone_number_part as phone_number_part, plain as plain, prevent_going_back as prevent_going_back, process_action as process_action, qr_code as qr_code, quantity_noun as quantity_noun, quote_paragraphs as quote_paragraphs, raw as raw, re_run_logic as re_run_logic, read_records as read_records, reconsider as reconsider, redact as redact, referring_url as referring_url, response as response, roman as roman, run_action_in_session as run_action_in_session, server_capabilities as server_capabilities, session_tags as session_tags, set_country as set_country, set_info as set_info, set_language as set_language, set_live_help_status as set_live_help_status, set_locale as set_locale, set_parts as set_parts, set_progress as set_progress, set_save_status as set_save_status, set_session_variables as set_session_variables, set_title as set_title, set_user_info as set_user_info, set_variables as set_variables, showif as showif, showifdef as showifdef, single_paragraph as single_paragraph, single_to_double_newlines as single_to_double_newlines, space_to_underscore as space_to_underscore, split as split, state_name as state_name, states_list as states_list, static_image as static_image, store_variables_snapshot as store_variables_snapshot, subdivision_type as subdivision_type, title_case as title_case, undefine as undefine, update_terms as update_terms, url_action as url_action, url_of as url_of, user_has_privilege as user_has_privilege, user_info as user_info, user_lat_lon as user_lat_lon, user_logged_in as user_logged_in, user_privileges as user_privileges, us as us, value as value, variables_as_json as variables_as_json, verb_past as verb_past, verb_present as verb_present, verbatim as verbatim, word as word, write_record as write_record, yesno as yesno, this_thread as this_thread, update_locale as update_locale
+from docassemble.base.functions import action_argument as action_argument, action_arguments as action_arguments, action_menu_item as action_menu_item, add_separators as add_separators, all_variables as all_variables, alpha as alpha, background_action as background_action, background_error_action as background_error_action, background_response as background_response, background_response_action as background_response_action, bold as bold, capitalize as capitalize, chat_partners_available as chat_partners_available, comma_and_list as comma_and_list, comma_list as comma_list, command as command, countries_list as countries_list, country_name as country_name, create_session as create_session, create_user as create_user, currency as currency, currency_symbol as currency_symbol, current_context as current_context, CustomDataType as CustomDataType, decode_name as decode_name, define as define, defined as defined, delete_record as delete_record, device as device, dispatch as dispatch, encode_name as encode_name, fix_punctuation as fix_punctuation, force_ask as force_ask, force_gather as force_gather, forget_result_of as forget_result_of, from_b64_json as from_b64_json, get_chat_log as get_chat_log, get_config as get_config, get_country as get_country, get_default_timezone as get_default_timezone, get_dialect as get_dialect, get_emails as get_emails, get_info as get_info, get_language as get_language, get_locale as get_locale, get_progress as get_progress, get_question_data as get_question_data, get_session_variables as get_session_variables, get_user_info as get_user_info, get_user_list as get_user_list, get_user_secret as get_user_secret, get_voice as get_voice, go_back_in_session as go_back_in_session, indefinite_article as indefinite_article, indent as indent, interface as interface, interview_email as interview_email, interview_list as interview_list, interview_menu as interview_menu, interview_url as interview_url, interview_url_action as interview_url_action, interview_url_action_as_qr as interview_url_action_as_qr, interview_url_as_qr as interview_url_as_qr, invalidate as invalidate, invite_user as invite_user, italic as italic, item_label as item_label, json_response as json_response, language_from_browser as language_from_browser, language_name as language_name, location_known as location_known, location_returned as location_returned, log as log, manage_privileges as manage_privileges, message as message, name_suffix as name_suffix, need as need, nice_number as nice_number, noun_plural as noun_plural, noun_singular as noun_singular, noyes as noyes, ordinal as ordinal, ordinal_number as ordinal_number, period_list as period_list, phone_number_formatted as phone_number_formatted, phone_number_in_e164 as phone_number_in_e164, phone_number_is_valid as phone_number_is_valid, phone_number_part as phone_number_part, plain as plain, prevent_going_back as prevent_going_back, process_action as process_action, qr_code as qr_code, quantity_noun as quantity_noun, quote_paragraphs as quote_paragraphs, raw as raw, re_run_logic as re_run_logic, read_records as read_records, reconsider as reconsider, redact as redact, referring_url as referring_url, response as response, roman as roman, run_action_in_session as run_action_in_session, server_capabilities as server_capabilities, session_tags as session_tags, set_country as set_country, set_info as set_info, set_language as set_language, set_live_help_status as set_live_help_status, set_locale as set_locale, set_parts as set_parts, set_progress as set_progress, set_save_status as set_save_status, set_session_variables as set_session_variables, set_title as set_title, set_user_info as set_user_info, set_variables as set_variables, showif as showif, showifdef as showifdef, single_paragraph as single_paragraph, single_to_double_newlines as single_to_double_newlines, space_to_underscore as space_to_underscore, split as split, state_name as state_name, states_list as states_list, static_image as static_image, store_variables_snapshot as store_variables_snapshot, subdivision_type as subdivision_type, title_case as title_case, undefine as undefine, update_terms as update_terms, url_action as url_action, url_of as url_of, user_has_privilege as user_has_privilege, user_info as user_info, user_lat_lon as user_lat_lon, user_logged_in as user_logged_in, user_privileges as user_privileges, us as us, value as value, variables_as_json as variables_as_json, verb_past as verb_past, verb_present as verb_present, verbatim as verbatim, word as word, write_record as write_record, yesno as yesno, this_thread as this_thread, update_locale as update_locale
 from itertools import chain as chain
 
 capitalize_func = capitalize
 
-__all__: List[str] = [
-    'Address', 'Asset', 'ChildList', 'City', 'DA', 'DABreadCrumbs', 'DACloudStorage', 'DAContext', 'DADict', 'DAEmail', 'DAEmailRecipient', 'DAEmailRecipientList', 'DAEmpty', 'DAFile', 'DAFileCollection', 'DAFileList', 'DAGlobal', 'DAGoogleAPI', 'DALink', 'DAList', 'DAOAuth', 'DAObject', 'DAOrderedDict', 'DARedis', 'DASet', 'DAStaticFile', 'DAStore', 'DATemplate', 'DAValidationError', 'DAWeb', 'DAWebError', 'Event', 'Expense', 'FinancialList', 'Income', 'Individual', 'IndividualName', 'LatitudeLongitude', 'MachineLearningEntry', 'Name', 'OfficeList', 'Organization', 'PeriodicFinancialList', 'PeriodicValue', 'Person', 'RandomForestMachineLearner', 'RelationshipTree', 'RoleChangeTracker', 'SVMMachineLearner', 'SimpleTextMachineLearner', 'Thing', 'Value', 'action_argument', 'action_arguments', 'action_button_html', 'action_menu_item', 'add_separators', 'all_variables', 'alpha', 'as_datetime', 'assemble_docx', 'background_action', 'background_error_action', 'background_response', 'background_response_action', 'bold', 'capitalize', 'chain', 'chat_partners_available', 'clear_explanations', 'comma_and_list', 'comma_list', 'command', 'countries_list', 'country_name', 'create_session', 'create_user', 'currency', 'currency_symbol', 'current_datetime', 'date_difference', 'date_interval', 'day_of', 'decode_name', 'define', 'defined', 'delete_record', 'device', 'dispatch', 'docx_concatenate', 'dow_of', 'encode_name', 'explain', 'fix_punctuation', 'force_ask', 'force_gather', 'forget_result_of', 'format_date', 'format_datetime', 'format_time', 'from_b64_json', 'get_chat_log', 'get_config', 'get_country', 'get_default_timezone', 'get_dialect', 'get_emails', 'get_info', 'get_language', 'get_locale', 'get_progress', 'get_question_data', 'get_session_variables', 'get_sms_session', 'get_status', 'get_user_info', 'get_user_list', 'get_user_secret', 'get_voice', 'go_back_in_session', 'include_docx_template', 'indefinite_article', 'indent', 'initiate_sms_session', 'interface', 'interview_email', 'interview_list', 'interview_menu', 'interview_url', 'interview_url_action', 'interview_url_action_as_qr', 'interview_url_as_qr', 'invalidate', 'iso_country', 'italic', 'item_label', 'json', 'json_response', 'language_from_browser', 'language_name', 'last_access_days', 'last_access_delta', 'last_access_hours', 'last_access_minutes', 'last_access_time', 'location_known', 'location_returned', 'log', 'logic_explanation', 'manage_privileges', 'map_of', 'mark_task_as_performed', 'message', 'month_of', 'name_suffix', 'need', 'nice_number', 'noun_plural', 'noun_singular', 'noyes', 'objects_from_file', 'ocr_file', 'ocr_file_in_background', 'ordinal', 'ordinal_number', 'overlay_pdf', 'path_and_mimetype', 'pdf_concatenate', 'period_list', 'phone_number_formatted', 'phone_number_in_e164', 'phone_number_is_valid', 'phone_number_part', 'plain', 'prevent_going_back', 'process_action', 'qr_code', 'quantity_noun', 'quote_paragraphs', 'raw', 're', 're_run_logic', 'read_qr', 'read_records', 'reconsider', 'redact', 'referring_url', 'response', 'retrieve_stashed_data', 'returning_user', 'roman', 'run_action_in_session', 'run_python_module', 'selections', 'send_email', 'send_fax', 'send_sms', 'server_capabilities', 'session_tags', 'set_country', 'set_info', 'set_language', 'set_live_help_status', 'set_locale', 'set_parts', 'set_progress', 'set_save_status', 'set_session_variables', 'set_status', 'set_task_counter', 'set_title', 'set_user_info', 'set_variables', 'showif', 'showifdef', 'single_paragraph', 'single_to_double_newlines', 'space_to_underscore', 'split', 'start_time', 'stash_data', 'state_name', 'states_list', 'static_image', 'store_variables_snapshot', 'subdivision_type', 'task_not_yet_performed', 'task_performed', 'terminate_sms_session', 'times_task_performed', 'timezone_list', 'title_case', 'today', 'transform_json_variables', 'undefine', 'update_terms', 'update_locale', 'url_action', 'url_ask', 'url_of', 'us', 'user_has_privilege', 'user_info', 'user_lat_lon', 'user_logged_in', 'user_privileges', 'validation_error', 'value', 'variables_as_json', 'verb_past', 'verb_present', 'verbatim', 'word', 'write_record', 'year_of', 'yesno', 'zip_file'
+__all__ = [
+    'alpha',
+    'roman',
+    'item_label',
+    'ordinal',
+    'ordinal_number',
+    'comma_list',
+    'word',
+    'get_language',
+    'set_language',
+    'get_dialect',
+    'get_voice',
+    'set_country',
+    'get_country',
+    'get_locale',
+    'set_locale',
+    'update_locale',
+    'comma_and_list',
+    'need',
+    'nice_number',
+    'quantity_noun',
+    'currency_symbol',
+    'verb_past',
+    'verb_present',
+    'noun_plural',
+    'noun_singular',
+    'indefinite_article',
+    'capitalize',
+    'space_to_underscore',
+    'force_ask',
+    'force_gather',
+    'period_list',
+    'name_suffix',
+    'currency',
+    'static_image',
+    'title_case',
+    'url_of',
+    'process_action',
+    'url_action',
+    'get_info',
+    'set_info',
+    'get_config',
+    'prevent_going_back',
+    'qr_code',
+    'action_menu_item',
+    'from_b64_json',
+    'defined',
+    'define',
+    'value',
+    'message',
+    'response',
+    'json_response',
+    'command',
+    'single_paragraph',
+    'quote_paragraphs',
+    'location_returned',
+    'location_known',
+    'user_lat_lon',
+    'interview_url',
+    'interview_url_action',
+    'interview_url_as_qr',
+    'interview_url_action_as_qr',
+    'LatitudeLongitude',
+    'RoleChangeTracker',
+    'Name',
+    'IndividualName',
+    'Address',
+    'City',
+    'Event',
+    'Person',
+    'Thing',
+    'Individual',
+    'ChildList',
+    'FinancialList',
+    'PeriodicFinancialList',
+    'Income',
+    'Asset',
+    'Expense',
+    'Value',
+    'PeriodicValue',
+    'OfficeList',
+    'Organization',
+    'objects_from_file',
+    'send_email',
+    'send_sms',
+    'send_fax',
+    'map_of',
+    'selections',
+    'DAObject',
+    'DAList',
+    'DADict',
+    'DAOrderedDict',
+    'DASet',
+    'DAFile',
+    'DAFileCollection',
+    'DAFileList',
+    'DAStaticFile',
+    'DAEmail',
+    'DAEmailRecipient',
+    'DAEmailRecipientList',
+    'DATemplate',
+    'DAEmpty',
+    'DALink',
+    'last_access_time',
+    'last_access_delta',
+    'last_access_days',
+    'last_access_hours',
+    'last_access_minutes',
+    'returning_user',
+    'action_arguments',
+    'action_argument',
+    'timezone_list',
+    'as_datetime',
+    'current_datetime',
+    'date_difference',
+    'date_interval',
+    'year_of',
+    'month_of',
+    'day_of',
+    'dow_of',
+    'format_date',
+    'format_datetime',
+    'format_time',
+    'today',
+    'get_default_timezone',
+    'user_logged_in',
+    'interface',
+    'user_privileges',
+    'user_has_privilege',
+    'user_info',
+    'current_context',
+    'task_performed',
+    'task_not_yet_performed',
+    'mark_task_as_performed',
+    'times_task_performed',
+    'set_task_counter',
+    'background_action',
+    'background_response',
+    'background_response_action',
+    'background_error_action',
+    'us',
+    'DARedis',
+    'DACloudStorage',
+    'DAGoogleAPI',
+    'MachineLearningEntry',
+    'SimpleTextMachineLearner',
+    'SVMMachineLearner',
+    'RandomForestMachineLearner',
+    'set_live_help_status',
+    'chat_partners_available',
+    'phone_number_in_e164',
+    'phone_number_formatted',
+    'phone_number_is_valid',
+    'countries_list',
+    'country_name',
+    'write_record',
+    'read_records',
+    'delete_record',
+    'variables_as_json',
+    'all_variables',
+    'ocr_file',
+    'ocr_file_in_background',
+    'read_qr',
+    'get_sms_session',
+    'initiate_sms_session',
+    'terminate_sms_session',
+    'language_from_browser',
+    'device',
+    'interview_email',
+    'get_emails',
+    'plain',
+    'bold',
+    'italic',
+    'path_and_mimetype',
+    'states_list',
+    'state_name',
+    'subdivision_type',
+    'indent',
+    'raw',
+    'fix_punctuation',
+    'set_progress',
+    'get_progress',
+    'referring_url',
+    'run_python_module',
+    'undefine',
+    'invalidate',
+    'dispatch',
+    'yesno',
+    'noyes',
+    'split',
+    'showif',
+    'showifdef',
+    'phone_number_part',
+    'pdf_concatenate',
+    'set_parts',
+    'log',
+    'encode_name',
+    'decode_name',
+    'interview_list',
+    'interview_menu',
+    'server_capabilities',
+    'session_tags',
+    'include_docx_template',
+    'get_chat_log',
+    'get_user_list',
+    'get_user_info',
+    'set_user_info',
+    'get_user_secret',
+    'create_user',
+    'invite_user',
+    'create_session',
+    'get_session_variables',
+    'set_session_variables',
+    'go_back_in_session',
+    'manage_privileges',
+    'start_time',
+    'zip_file',
+    'validation_error',
+    'DAValidationError',
+    'redact',
+    'forget_result_of',
+    're_run_logic',
+    'reconsider',
+    'action_button_html',
+    'url_ask',
+    'overlay_pdf',
+    'get_question_data',
+    'set_title',
+    'set_save_status',
+    'single_to_double_newlines',
+    'RelationshipTree',
+    'DAContext',
+    'DAOAuth',
+    'DAStore',
+    'explain',
+    'clear_explanations',
+    'logic_explanation',
+    'set_status',
+    'get_status',
+    'verbatim',
+    'add_separators',
+    'DAWeb',
+    'DAWebError',
+    'json',
+    're',
+    'iso_country',
+    'assemble_docx',
+    'docx_concatenate',
+    'store_variables_snapshot',
+    'stash_data',
+    'retrieve_stashed_data',
+    'update_terms',
+    'chain',
+    'DABreadCrumbs',
+    'set_variables',
+    'language_name',
+    'DA',
+    'DAGlobal',
+    'run_action_in_session',
+    'transform_json_variables'
 ]
 
 _T = TypeVar('_T')
@@ -104,6 +362,7 @@ class DAObject:
     def get_peer_relation(self, relationship_type, tree, create: bool = ..., object_type: Incomplete | None = ..., complete_attribute: Incomplete | None = ..., rel_filter_by: Incomplete | None = ..., filter_by: Incomplete | None = ..., count: int = ...): ...
     def set_peer_relationship(self, target, relationship_type, tree, replace: bool = ...): ...
     def set_relationship(self, target, relationship_type, self_is, tree, replace: bool = ...): ...
+    def get_point_of_view(self): ...
     def fix_instance_name(self, old_instance_name, new_instance_name) -> None: ...
     def set_instance_name(self, thename) -> None: ...
     def set_random_instance_name(self) -> None: ...
@@ -116,9 +375,15 @@ class DAObject:
     def _reset_gathered_recursively(self) -> None: ...
     def _map_info(self) -> Optional[Any]: ...
     def __getattr__(self, thename): ...
+    def raise_undefined_attribute_error(self, thename): ...
     def object_name(self, **kwargs): ...
     def as_serializable(self): ...
+    def possessive(self, target, **kwargs): ...
     def object_possessive(self, target, **kwargs): ...
+    def is_are_you(self, **kwargs): ...
+    def yourself_or_name(self, **kwargs): ...
+    def itself(self, **kwargs): ...
+    def is_user(self) -> bool: ...
     def initializeAttribute(self, *pargs, **kwargs): ...
     def reInitializeAttribute(self, *pargs, **kwargs): ...
     def attribute_defined(self, name): ...
@@ -127,9 +392,17 @@ class DAObject:
     def __dir__(self): ...
     def pronoun_possessive(self, target, **kwargs): ...
     def pronoun(self, **kwargs): ...
-    def alternative(self, *pargs, **kwargs): ...
     def pronoun_objective(self, **kwargs): ...
     def pronoun_subjective(self, **kwargs): ...
+    def alternative(self, *pargs, **kwargs): ...
+    def do_question(self, the_verb, **kwargs): ...
+    def did_question(self, the_verb, **kwargs): ...
+    def were_question(self, the_target, **kwargs): ...
+    def have_question(self, the_target, **kwargs): ...
+    def does_verb(self, the_verb, **kwargs): ...
+    def did_verb(self, the_verb, **kwargs): ...
+    def subjective_pronoun_or_name(self, **kwargs): ...
+    def pronoun_or_name(self, **kwargs): ...
     def __setattr__(self, key, the_value) -> None: ...
     def __le__(self, other) -> bool: ...
     def __ge__(self, other) -> bool: ...
@@ -137,7 +410,7 @@ class DAObject:
     def __lt__(self, other) -> bool: ...
     def __eq__(self, other) -> bool: ...
     def __ne__(self, other) -> bool: ...
-    def __hash__(self): ...
+    def __hash__(self) -> int: ...
 
 class DACatchAll(DAObject):
     def data_type_guess(self): ...
@@ -232,6 +505,7 @@ class DAList(DAObject):
     def init(self, *pargs, **kwargs) -> None: ...
     def initializeObject(self, *pargs, **kwargs): ...
     def set_object_type(self, object_type) -> None: ...
+    def cancel_add_or_edit(self): ...
     doing_gathered_and_complete: bool
     def gathered_and_complete(self): ...
     def item_name(self, item) -> str: ...
@@ -264,6 +538,7 @@ class DAList(DAObject):
     def extend(self, the_list) -> None: ...
     def first(self): ...
     def last(self): ...
+    def were_question(self, the_target, **kwargs): ...
     def does_verb(self, the_verb, **kwargs) -> str: ...
     def did_verb(self, the_verb, **kwargs) -> str: ...
     def as_singular_noun(self) -> str: ...
@@ -293,6 +568,7 @@ class DAList(DAObject):
     def _fill_up_to(self, index) -> None: ...
     def __setitem__(self, index, the_value): ...
     def __getitem__(self, index): ...
+    def raise_undefined_index_error(self, index): ...
     def __str__(self) -> str: ...
     def __repr__(self): ...
     def union(self, other_set) -> "DASet": ...
@@ -353,6 +629,11 @@ class DADict(DAObject):
     def reset_gathered(self, recursive: bool = ..., only_if_empty: bool = ..., mark_incomplete: bool = ...) -> None: ...
     def slice(self, *pargs): ...
     def has_been_gathered(self) -> bool: ...
+    def itself(self, **kwargs): ...
+    def do_question(self, the_verb, **kwargs): ...
+    def did_question(self, the_verb, **kwargs): ...
+    def were_question(self, the_target, **kwargs): ...
+    def have_question(self, the_target, **kwargs): ...
     def does_verb(self, the_verb, **kwargs): ...
     def did_verb(self, the_verb, **kwargs): ...
     def as_singular_noun(self): ...
@@ -376,6 +657,7 @@ class DADict(DAObject):
     def _new_item_init_callback(self) -> None: ...
     def comma_and_list(self, **kwargs): ...
     def __getitem__(self, index): ...
+    def raise_undefined_index_error(self, index): ...
     def __setitem__(self, key, the_value) -> None: ...
     def __contains__(self, item) -> bool: ...
     def keys(self): ...
@@ -852,6 +1134,8 @@ class IndividualName(Name):
     def init(self, *pargs, **kwargs) -> None: ...
     def defined(self) -> bool: ...
     def familiar(self) -> str: ...
+    # NOTE(allowlist):
+    # kwargs needs to be here because `Name` has kwargs in it. DA doesn't do anything with them in either.
     def full(self, middle: str = ..., use_suffix: bool = ..., **kwargs) -> str: ...
     def firstlast(self) -> str: ...
     def lastfirst(self) -> str: ...
@@ -925,8 +1209,6 @@ class Person(DAObject):
     def email_address(self, include_name: Incomplete | None = ...) -> str: ...
     def do_question(self, the_verb, **kwargs) -> str: ...
     def did_question(self, the_verb, **kwargs) -> str: ...
-    def were_question(self, the_target, **kwargs) -> str: ...
-    def have_question(self, the_target, **kwargs) -> str: ...
     def does_verb(self, the_verb, **kwargs) -> str: ...
     def did_verb(self, the_verb, **kwargs) -> str: ...
     def subject(self, **kwargs) -> str: ...
@@ -938,6 +1220,7 @@ class Individual(Person):
     def gather_family(self, tree, up: int = ..., down: int = ...) -> None: ...
     def identified(self) -> bool: ...
     def age_in_years(self, decimals: bool = ..., as_of: Incomplete | None = ...) -> int | float: ...
+    def age_in_months(self, decimals: bool = ..., as_of: Incomplete | None = ...) -> int | float: ...
     def first_name_hint(self) -> str: ...
     def last_name_hint(self) -> str: ...
     def salutation(self, **kwargs) -> str: ...

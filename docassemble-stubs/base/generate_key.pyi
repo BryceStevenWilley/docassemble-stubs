@@ -1,3 +1,9 @@
+from _typeshed import Incomplete
+
+__all__ = ['random_string', 'random_alphanumeric']
+
+r: Incomplete
+
 def random_lower_string(length): ...
 def random_string(length): ...
 def random_bytes(length): ...

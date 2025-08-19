@@ -3,7 +3,6 @@ from typing import NamedTuple
 
 win32: Incomplete
 pypy: Incomplete
-py38: Incomplete
 
 class ArgSpec(NamedTuple):
     args: Incomplete

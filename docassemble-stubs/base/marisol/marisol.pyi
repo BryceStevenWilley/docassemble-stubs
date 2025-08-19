@@ -2,14 +2,14 @@ from _typeshed import Incomplete
 from enum import Enum
 
 class Area(Enum):
-    TOP_LEFT: int
-    TOP_RIGHT: int
-    BOTTOM_RIGHT: int
-    BOTTOM_LEFT: int
+    TOP_LEFT = 0
+    TOP_RIGHT = 1
+    BOTTOM_RIGHT = 2
+    BOTTOM_LEFT = 3
 
 class RedactionStyle(Enum):
-    SOLID: Incomplete
-    OUTLINE: Incomplete
+    SOLID = ((0, 0, 0), (0, 0, 0), (1, 1, 1))
+    OUTLINE = ((0, 0, 0), (1, 1, 1), (0, 0, 0))
     stroke: Incomplete
     fill: Incomplete
     text: Incomplete

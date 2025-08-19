@@ -7,6 +7,11 @@ from docassemble.base.parse import Question as Question
 from docassemble.base.util import format_date as format_date, format_datetime as format_datetime, format_time as format_time
 from html.parser import HTMLParser
 
+# NOTE(allowlist):
+# This is present in the allow list because the daconfig isn't loaded,
+# but is assumed to be. So there's a `KeyError` on `button colors` when
+# defining module level variables.
+
 equals_byte: Incomplete
 NoneType: Incomplete
 STRICT_MODE: Incomplete

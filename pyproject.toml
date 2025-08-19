@@ -1,6 +1,6 @@
 [project]
 name = "docassemble.stubs"
-version = "1.4.72b2"
+version = "1.8.10b2"
 description = "Python type stubs for docassemble core code"
 readme = "README.md"
 authors = [
@@ -11,7 +11,7 @@ license-files = [
     "LICENSE",
 ]
 dependencies = [
-    "docassemble.base==1.4.72",
+    "docassemble.base==1.8.10",
     "lingua",
     "types-Pygments"
 ]
