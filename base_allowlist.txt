@@ -1,5 +1,4 @@
 docassemble.base.legal.IndividualName.full
-docassemble.base.legal.us
 docassemble.base.mako.ext.linguaplugin.LinguaMakoExtractor
 docassemble.base.standardformatter
 docassemble.base.util.IndividualName.full

@@ -1,1 +1,3 @@
+__all__ = ['to_text']
+
 def to_text(html_doc): ...

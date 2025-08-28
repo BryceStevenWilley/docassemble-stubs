@@ -1,3 +1,3 @@
 from _typeshed import Incomplete
 
-def main(): ...
+LICENSES: Incomplete

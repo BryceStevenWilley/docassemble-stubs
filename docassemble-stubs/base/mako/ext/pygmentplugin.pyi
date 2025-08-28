@@ -1,11 +1,12 @@
 from _typeshed import Incomplete
+from typing import ClassVar
 from pygments.lexer import DelegatingLexer, RegexLexer
 
 class MakoLexer(RegexLexer):
     name: str
     aliases: Incomplete
     filenames: Incomplete
-    tokens: Incomplete
+    tokens: ClassVar[dict[str, list[Incomplete]]]
 
 class MakoHtmlLexer(DelegatingLexer):
     name: str

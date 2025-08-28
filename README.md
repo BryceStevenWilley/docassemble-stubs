@@ -33,5 +33,8 @@ stubtest --allowlist web_allowlist.txt docassemble.webapp
 All of the errors will be things that are missing in the stubs, and you will
 have to fix them manually.
 
-TODO(brycew): find a way to automatically update the stubs without overwriting the manually
-changed types?
+## TODO
+
+* Get rid of the allowlists if possible!
+    * the reasons each entry in the base allow list is there can be found as a comment in the origin file (look for `NOTE(allowlist)`).
+* find a way to automatically update the stubs without overwriting the manually changed types?
